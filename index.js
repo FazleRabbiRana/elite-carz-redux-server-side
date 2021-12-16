@@ -179,5 +179,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-	console.log('Running Elite Carz server on port', port);
+	console.log('Running Elite Carz Redux server on port', port);
 });
