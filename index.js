@@ -16,7 +16,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run() {
 	try {
 		await client.connect();
-		const database = client.db('eliteCarz_db');
+		const database = client.db('eliteCarzRedux_db');
     const reviewsCollection = database.collection('reviews');
     const blogsCollection = database.collection('blogs');
     const usersCollection = database.collection('users');
@@ -175,7 +175,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get('/', (req, res) => {
-	res.send('Running Elite Carz server.');
+	res.send('Running Elite Carz Redux server.');
 });
 
 app.listen(port, () => {
